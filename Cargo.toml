@@ -1,0 +1,30 @@
+[package]
+name = "dotslash_fixtures"
+version = "0.0.0"
+
+[[bin]]
+name = "exit_code"
+path = "exit_code.rs"
+
+[[bin]]
+name = "print_argv"
+path = "print_argv.rs"
+
+[[bin]]
+name = "print_argv_stderr"
+path = "print_argv_stderr.rs"
+
+[[bin]]
+name = "stdin_to_stderr"
+path = "stdin_to_stderr.rs"
+
+[[bin]]
+name = "stdin_to_stdout"
+path = "stdin_to_stdout.rs"
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
